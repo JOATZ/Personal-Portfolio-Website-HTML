@@ -258,12 +258,12 @@ h6 {
 
 #hero .hero-container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   min-width: 300px;
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: 0px 0 10px 0; /*this changes name postion*/
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
@@ -389,6 +389,14 @@ section {
   padding: 30px;
   width: 100%;
 }
+
+.facts .count-box:hover {
+  padding: 30px;
+  width: 100%;
+  border: solid 1px;
+  border-radius: 20px;
+}
+
 
 .facts .count-box i {
   display: block;
