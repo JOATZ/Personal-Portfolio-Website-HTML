@@ -11,13 +11,14 @@
     "imagemin": "imagemin assets/img/* -o dist/assets/img/ && imagemin assets/img/helicopters/* -o dist/assets/img/helicopters/ && imagemin assets/img/portfolio/* -o dist/assets/img/portfolio/ && imagemin assets/img/testimonials/* -o dist/assets/img/testimonials/ && imagemin assets/img/certs/* -o dist/assets/img/certs/",
     "watch:scss": "onchange \"assets/scss/*.scss\" -- npm run scss",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
-    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/assets/fonts",
     "copyjs": "copyfiles -f node_modules/bootstrap/dist/js/bootstrap.bundle.js js",
-    "babel": "babel js/* -d js",
+    "copyVendor":"copyfiles -u 1 assets/vendor/** dist/assets",
+    "babel": "babel js/* js",
     "usemin": "usemin portfolio-details.html -d dist --htmlmin -o dist/portfolio-details.html && usemin inner-page.html -d dist --htmlmin -o dist/inner-page.html && usemin index.html -d dist --htmlmin -o dist/index.html",
 
     "start": "npm run watch:all",
-    "build": "npm run clean && npm run scss && npm run copyjs && npm run babel && npm run imagemin && npm run copyfonts && npm run usemin"
+    "build": "npm run clean && npm run scss && npm run copyjs && npm run copyVendor && npm run babel && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "auhtor": "Ryan Zierman w/@iPortfolio-PRO license",
   "devDependencies": {
