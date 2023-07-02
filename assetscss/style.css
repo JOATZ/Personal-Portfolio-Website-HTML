@@ -276,7 +276,8 @@ section {
   padding-bottom: 30px; }
   .facts .count-box {
     padding: 30px;
-    width: 100%; }
+    width: 100%;
+    border: solid 1px; }
     .facts .count-box i {
       display: block;
       font-size: 44px;
@@ -305,10 +306,12 @@ section {
       font-family: "Poppins", sans-serif;
       transition: ease-in-out 0.3s; }
       .facts .count-box a:hover {
-        color: #1f5297; }
+        color: #1f5297;
+        border: solid 1px;
+        border-color: #272829; }
 
 /*--------------------------------------------------------------
-# skills
+# skills test
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;

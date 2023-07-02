@@ -5,23 +5,26 @@
   "main": "index.html",
   "scripts": {
     "clean": "rimraf dist",
+    "scss": "node-sass assets/scss/ -o assets/css/",
+    "lite": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "imagemin": "imagemin assets/img/* -o dist/assets/img && imagemin assets/img/helicopters/* -o dist/assets/img/helicopters && imagemin assets/img/portfolio/* -o dist/assets/img/portfolio && imagemin assets/img/testimonials/* -o dist/assets/img/testimonials && imagemin assets/img/certs/* -o dist/assets/img/certs",
+    "watch:scss": "onchange \"assets/scss/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+
+    "start": "npm run watch:all",
+
     "copyjs": "copyfiles -f node_modules/bootstrap/dist/js/bootstrap.bundle.js js",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "copyAssetsJs": "copyfiles -f assets/js/* dist/assets/js",
     "babel": "babel js/* -d js",
-    "usemin": "usemin inner-page.html portfolio-details.html index.html -d dist --htmlmin -o dist",
-    "imagemin": "imagemin assets/img/* -o dist/assets/img && imagemin assets/img/helicopters/* -o dist/assets/img/helicopters && imagemin assets/img/portfolio/* -o dist/assets/img/portfolio && imagemin assets/img/testimonials/* -o dist/assets/img/testimonials && imagemin assets/img/certs/* -o dist/assets/img/certs",
-    "copyScss": "copyfiles -f assets/scss/* dist/assets/scss && copyfiles -f assets/css/* dist/assets/css",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist",
+    
+    "copyScss": "copyfiles -f assets/css/* dist/assets/css",
     "copyVendor": "copyfiles assets/vendor/**/* dist",
     "copyForms": "copyfiles -f forms/* dist/forms",
+    "build": "npm run clean && npm run copyjs && npm run copyfonts && npm run copyAssetsJs && npm run usemin && npm run babel && npm run imagemin && npm run copyScss && npm run copyVendor && npm run copyForms"
 
-    "build": "npm run clean && npm run copyjs && npm run copyfonts && npm run copyAssetsJs && npm run usemin && npm run babel && npm run imagemin && npm run copyScss && npm run copyVendor && npm run copyForms",
-    "lite": "lite-server",
-    "scss": "node-sass -o assets/css/ assets/css/ && node-sass -o assets/scss/ assets/scss",
-    "start": "npm run lite",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
   },
   "auhtor": "Ryan Zierman w/@iPortfolio-PRO license",
   "devDependencies": {
