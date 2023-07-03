@@ -306,9 +306,12 @@ section {
       transition: ease-in-out 0.3s; }
       .facts .count-box a:hover {
         color: #1f5297; }
+    .facts .count-box:hover {
+      border: solid 1px;
+      border-radius: 25px 50px; }
 
 /*--------------------------------------------------------------
-# skills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -354,6 +357,8 @@ section {
   margin-top: -2px;
   border-left: 2px solid #1f5297;
   position: relative; }
+  .resume .resume-item .cert-link:hover {
+    color: #007bff; }
   .resume .resume-item h4 {
     line-height: 18px;
     font-size: 18px;
