@@ -360,6 +360,8 @@ section {
   margin-top: -2px;
   border-left: 2px solid #1f5297;
   position: relative; }
+  .resume .resume-item [role] {
+    color: #007bff; }
   .resume .resume-item .cert-link:hover {
     color: #007bff; }
   .resume .resume-item h4 {

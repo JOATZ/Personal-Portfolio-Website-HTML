@@ -194,6 +194,10 @@ section {
     border-left: 2px solid lighten($secondary, 30);
     position: relative;
 
+    [role] { /*had to throw this in to make the prof certs blue, may not be best*/
+      color: $blue;
+    }
+
     .cert-link:hover {
       color: $blue;
     }
