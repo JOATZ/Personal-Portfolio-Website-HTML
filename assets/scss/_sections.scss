@@ -72,6 +72,10 @@ section {
     p:last-child {
       margin-bottom: 0;
     }
+
+    a:hover {
+      color: rgba($primary, .75);
+    }
   }
 }
 
