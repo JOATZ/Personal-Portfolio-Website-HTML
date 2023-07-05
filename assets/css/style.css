@@ -361,6 +361,7 @@ section {
   border-left: 2px solid #1f5297;
   position: relative; }
   .resume .resume-item [role] {
+    /*had to throw this in to make the prof certs blue, may not be best*/
     color: #007bff; }
   .resume .resume-item .cert-link:hover {
     color: #007bff; }
