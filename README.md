@@ -26,4 +26,4 @@ Please note that the specific adaptations and modifications made to the template
 
 ## Conclusion
 
-This README provides a brief overview of my adaptation of the iPortfolio template, including credits to the original author, licensing information, and the technologies used. For any inquiries or further information, please feel free to contact me.
+This README provides a brief overview of my adaptation of the iPortfolio template, including credits to the original author, licensing information, and the technologies used. For any inquiries or further information, please feel free to contact theJOATZ@pm.me.
